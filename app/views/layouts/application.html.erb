@@ -1,16 +1,52 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Railsapp</title>
+    <title>RailsTest</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
   <body>
+    <header class="header">
+      <div class="header-inner">
+        <div class="header-left-nav">
+          <a href="#">
+            <img alt="サイトのロゴ画像" src="https://presite-potepancamp-rails-02.herokuapp.com/assets/logo.png">
+          </a>
+          <form>
+          </form>
+        </div>
+        <div class="header-right-nav">
+          <div class="nav-item">
+            <a class="btn btn-primary my-2 my-3">ログイン</a>
+            <a class="btn btn-secondary">登録する</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="clearflex">
+    </div>
+    <script>
+      $(function() {
+        $('.nav-triger').click(function() {
+          $('.header-nav-menu').toggle(1500);
+        })
+      });
+    </script>
+    <div class="notifications">
+      <div class="notice"></div>
+    </div>
     <%= yield %>
+    <footer class="footer">
+      <p>© 2020 POTEPAN.INC.</p>
+    </footer>
   </body>
 </html>
