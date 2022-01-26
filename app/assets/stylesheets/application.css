@@ -131,3 +131,88 @@ p {
     margin-top: 0;
     margin-bottom: 1rem;
 }
+
+.device {
+    padding-top: 36px;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1140px;
+
+    @media screen and (min-width: 576px) {
+        max-width: 540px;
+    }
+    @media screen and (min-width: 768px) {
+        max-width: 720px;
+    }
+    @media screen and (min-width: 992px) {
+        max-width: 960px;
+    }
+    @media screen and (min-width: 1200px) {
+        max-width: 1140px;
+    }
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.device_frame {
+    max-width: 600px;
+    text-align: center;
+    padding: 24px;
+    margin: 0px auto;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: rgb(21 27 38 / 15%) 0px 1px 3px 0px;
+}
+
+.device p {
+    font-size: 16px;
+}
+
+.device a {
+    color: #007bff !important;
+}
+
+.device_inner {
+    width: 360px;
+    margin: 0px auto;
+}
+
+button, input {
+    overflow: visible;
+}
+
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+div.field, div.actions {
+    margin-bottom : 10px;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -5px;
+    margin-left: -5px;
+}
+
+.required-b::before {
+    content: "必須";
+    color: #fff;
+    background-color: #ff0000a8;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 4px;
+    margin: 0 5px;
+}
