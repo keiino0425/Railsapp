@@ -27,7 +27,7 @@
                         <h5>プロフィール</h5>
                     </div>
                 </div>
-                <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+                <%= form_for(resource, as: resource_name, url: "/users/profile/edit", html: { method: :put }) do |f| %>
                     <%= render "devise/shared/error_messages", resource: resource %>
 
                     <div class="update-content">
