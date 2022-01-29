@@ -253,6 +253,10 @@ div.field, div.actions {
     display: none;
 }
 
+ul {
+    list-style: none;
+}
+
 .user .user-nav li {
     font-size: 18px;
     padding: 10px;
@@ -338,4 +342,13 @@ div.field, div.actions {
     border-radius: 5px;
     padding: 4px;
     margin: 0 5px;
+}
+textarea.form-control {
+    height: auto;
+}
+
+.field_with_errors {
+    padding: 2px;
+    background-color: red;
+    display: table;
 }

@@ -35,12 +35,12 @@ class Users::SessionsController < Devise::SessionsController
 
   def profile_edit
     @user = current_user
-    if @user.update(params.require(:user).permit(:username, :email, :password, :userimage, :userinfo))
+    if @user.update(params.require(:user).permit(:username, :email, :password, :userimage, :userinfo)) && @user.valid?(:profile)
       flash[:notice] = "ユーザー情報を更新しました"
       redirect_to "/users/profile/"
     else
       flash[:notice] = "エラー"
-      render "/users/profile/"
+      render "devise/sessions/profile"
     end
   end
 end
