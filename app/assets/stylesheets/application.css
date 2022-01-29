@@ -249,6 +249,23 @@ div.field, div.actions {
     }
 }
 
+@media (min-width: 576px) {
+    .d-sm-inline-block {
+        display: inline-block!important;
+    }
+}
+
+.header-nav-menu {
+    background-color: #fff;
+    border: 3px solid #F6F8F9;
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    padding: 15px;
+    z-index: 1000;
+}
+
 .d-none {
     display: none;
 }
@@ -352,3 +369,4 @@ textarea.form-control {
     background-color: red;
     display: table;
 }
+
