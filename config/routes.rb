@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
+  get 'reserve/index'
   resources :rooms
+  resources :reserve
   devise_for :users, controllers: {
     sessions: 'users/sessions'
   }
