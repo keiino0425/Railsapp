@@ -3,6 +3,8 @@ class ReserveController < ApplicationController
   end
 
   def new
+    @room = Room.find(params[:id])
+    @reserve = Reserve.new
   end
 
   def create

@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'reserve/index'
   resources :rooms
   resources :reserve
+  get 'reserve/new/:id', to: 'reserve#new'
   devise_for :users, controllers: {
     sessions: 'users/sessions'
   }
