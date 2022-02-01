@@ -1,23 +1,23 @@
 <div class="container room-show">
     <div class="row">
         <div class="col-md-8">
-            <%= image_tag "", alt: "部屋画像", class: "room-show-image" %>
+            <%= image_tag "#{@room.roomimage}", alt: "部屋画像", class: "room-show-image" %>
             <div class="room-show-detile">
                 <div class="room-show-detile-icon">
-                    <%= image_tag "", class: "host-icon" %>
+                    <%= image_tag "#{current_user.userimage}", class: "host-icon" %>
                 </div>
                 <div class="room-show-profile">
-                    <p class="room-show-profile-name"></p>
-                    <p class="room-show-profile-address"></p>
+                    <p class="room-show-profile-name"><%= @room.roomname %></p>
+                    <p class="room-show-profile-address"><%= @room.address %></p>
                 </div>
             </div>
-            <p class="room-show-detile-content"></p>
+            <p class="room-show-detile-content"><%= @room.roominfo %></p>
         </div>
         <div class="col-md-4">
             <div class="room-show-nav">
                 <h5 class="price-icon"></h5>
                 <div class="room-show-date-select">
-                    <%= form_with model:@reserve do |f| %>
+                    <%= form_with model:@reservation do |f| %>
 
                         <label for="start_date">開始日</label>
                         <%= f.date_field :startdate, class: "form-control mb-4" %>

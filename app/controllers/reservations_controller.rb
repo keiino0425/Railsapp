@@ -1,10 +1,10 @@
-class ReserveController < ApplicationController
+class ReservationsController < ApplicationController
   def index
   end
 
   def new
     @room = Room.find(params[:id])
-    @reserve = Reserve.new
+    @reservation = Reservation.new
   end
 
   def create

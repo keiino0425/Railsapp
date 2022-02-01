@@ -1,4 +1,4 @@
-class Reserve < ApplicationRecord
+class Reservation < ApplicationRecord
     belongs_to :room
 
     validates :startdate, presence: true

@@ -10,7 +10,7 @@ class RoomsController < ApplicationController
     @room = Room.new(params.require(:room).permit(:roomname, :roominfo, :price, :address, :roomimage))
     if @room.save
       flash[:notice] = "ルームを新規登録しました"
-      redirect_to "/reserve/new/#{@room.id}"
+      redirect_to "/reservations/new/#{@room.id}"
     else
       render "new"
     end

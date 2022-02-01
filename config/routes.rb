@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  get 'reserve/index'
+
   resources :rooms
-  resources :reserve
-  get 'reserve/new/:id', to: 'reserve#new'
+  resources :reservations
+  get 'reservations/new/:id', to: 'reservations#new'
   devise_for :users, controllers: {
     sessions: 'users/sessions'
   }
