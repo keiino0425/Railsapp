@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   mount_uploader :userimage, UserimageUploader
+  has_many :reservations
 
   with_options on: :profile do
     validates :username, presence: true

@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   resources :rooms
   resources :reservations
   get 'reservations/new/:id', to: 'reservations#new'
+  post 'reservations/confirm', to: 'reservations#confirm'
+  get 'reservations/:id', to: 'reservations#show'
   devise_for :users, controllers: {
     sessions: 'users/sessions'
   }
