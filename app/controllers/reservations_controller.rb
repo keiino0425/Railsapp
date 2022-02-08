@@ -20,7 +20,7 @@ class ReservationsController < ApplicationController
     session[:reservation] = @reservation
 
     if @reservation.invalid?
-      redirect_to "/reservations/new/#{@room.id}"
+      render "new"
     end
 
   end

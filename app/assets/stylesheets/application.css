@@ -119,6 +119,10 @@ img {
     text-align: center;
 }
 
+.notifications .alert {
+    background-color: #F35500;
+}
+
 .footer {
     position: absolute;
     bottom: 0;
