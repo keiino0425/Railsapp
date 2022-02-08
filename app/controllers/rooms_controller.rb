@@ -7,7 +7,7 @@ class RoomsController < ApplicationController
   end
 
   def create
-    @room = Room.new(params.require(:room).permit(:roomname, :roominfo, :price, :address, :roomimage))
+    @room = Room.new(params.require(:room).permit(:roomname, :roominfo, :price, :address, :roomimage, :user_id))
     if @room.save
       flash[:notice] = "ルームを新規登録しました"
       redirect_to "/reservations/new/#{@room.id}"
@@ -16,7 +16,14 @@ class RoomsController < ApplicationController
     end
   end
 
+  def post
+    @user = current_user
+    @rooms = @user.rooms
+  end
+  
   def show
+    @user = current_user
+    @rooms = Room.where(user_id: @user.id)
   end
 
   def edit

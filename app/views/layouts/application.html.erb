@@ -11,9 +11,6 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-
   <body>
     <header class="header">
       <div class="header-inner">
@@ -38,16 +35,16 @@
                 <% end %>
                 <ul class="header-nav-menu">
                   <li>
-                    <%= link_to "ルーム登録" %>
+                    <%= link_to "ルーム登録", "/rooms/new" %>
                   </li>
                   <li>
-                    <%= link_to "予約済みルーム一覧" %>
+                    <%= link_to "予約済みルーム一覧", "/reservations" %>
                   </li>
                   <li>
-                    <%= link_to "登録済みルーム一覧" %>
+                    <%= link_to "登録済みルーム一覧", "/rooms/posts" %>
                   </li>
                   <li>
-                    <%= link_to "設定", "/users/account/", data: {"turbolinks" => false} %>
+                    <%= link_to "設定", "/users/account", data: {"turbolinks" => false} %>
                   </li>
                   <li>
                     <%= link_to "ログアウト" %>
@@ -74,7 +71,10 @@
       });
     </script>
     <div class="notifications">
-      <div class="notice"></div>
+      <div class="notice">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+      </div>
     </div>
     <%= yield %>
     <footer class="footer">

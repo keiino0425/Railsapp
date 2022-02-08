@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   resources :rooms
   resources :reservations
+  get 'rooms/posts', to: 'rooms#post'
   get 'reservations/new/:id', to: 'reservations#new'
   post 'reservations/confirm', to: 'reservations#confirm'
   get 'reservations/:id', to: 'reservations#show'
