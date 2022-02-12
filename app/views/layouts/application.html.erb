@@ -14,9 +14,9 @@
     <header class="header">
       <div class="header-inner">
         <div class="header-left-nav">
-          <a href="#">
+          <%= link_to "/rooms" do %>
             <img alt="サイトのロゴ画像" src="https://presite-potepancamp-rails-02.herokuapp.com/assets/logo.png">
-          </a>
+          <% end %>
           <%= search_form_for @search, url: search_rooms_path do |f| %>
             <div class="header-sharch d-lg-inline-block d-none">
               <%= f.text_field :address_cont, placeholder: "エリア", class: "form-control" %>
