@@ -26,6 +26,9 @@ class RoomsController < ApplicationController
     @rooms = Room.where(user_id: @user.id)
   end
 
+  def search
+  end
+  
   def edit
   end
 

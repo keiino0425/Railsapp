@@ -127,6 +127,34 @@ img {
     background-color: #F35500;
 }
 
+.header-left-nav form {
+    display: inline-block;
+}
+
+.header-sharch {
+    position: relative;
+}
+
+.header-left-nav .form-control {
+    width: 180px;
+    display: inline-block;
+    position: relative;
+    border-radius: 2px;
+    padding-left: 30px;
+}
+
+.header i {
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    font-size: 18px;
+}
+
+@media screen and (min-width: 992px) {
+    .d-lg-inline-block {
+        display: inline-block!important;
+    }
+}
 .footer {
     position: absolute;
     bottom: 0;

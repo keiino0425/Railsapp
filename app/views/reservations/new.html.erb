@@ -16,7 +16,7 @@
         </div>
         <div class="col-md-4">
             <div class="room-show-nav">
-                <h5 class="price-icon"></h5>
+                <h5 class="price-icon"><%= @room.price %></h5>
                 <div class="room-show-date-select">
                     <%= form_with model:@reservation, url: "/reservations/confirm" do |f| %>
 

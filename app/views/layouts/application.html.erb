@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -18,8 +17,19 @@
           <a href="#">
             <img alt="サイトのロゴ画像" src="https://presite-potepancamp-rails-02.herokuapp.com/assets/logo.png">
           </a>
-          <form>
-          </form>
+          <%= search_form_for @search, url: search_rooms_path do |f| %>
+            <div class="header-sharch d-lg-inline-block d-none">
+              <%= f.text_field :address_cont, placeholder: "エリア", class: "form-control" %>
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="header-sharch d-lg-inline-block d-none">
+              <%= f.text_field :roominfo_cont, placeholder: "キーワード", class: "form-control" %>
+              <i class="fas fa-search"></i>
+            </div>
+            <div class="d-none">
+            <%= f.submit %>
+            </div>
+          <% end %>
         </div>
         <div class="header-right-nav">
           <% if user_signed_in? %>

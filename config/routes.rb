@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
-  resources :rooms
+  resources :rooms do
+    collection do
+      get :search, to: 'rooms#search'
+    end
+  end
   resources :reservations
   get 'rooms/posts', to: 'rooms#post'
   get 'reservations/new/:id', to: 'reservations#new'
