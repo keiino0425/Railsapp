@@ -39,7 +39,7 @@ class Users::SessionsController < Devise::SessionsController
       flash[:notice] = "ユーザー情報を更新しました"
       redirect_to "/users/profile/"
     else
-      flash[:notice] = "エラー"
+      flash[:alert] = "エラー"
       render "devise/sessions/profile"
     end
   end

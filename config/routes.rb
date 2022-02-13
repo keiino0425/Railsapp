@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       get :search, to: 'rooms#search'
     end
   end
+  root to: 'rooms#index'
   resources :reservations
   get 'rooms/posts', to: 'rooms#post'
   get 'reservations/new/:id', to: 'reservations#new'

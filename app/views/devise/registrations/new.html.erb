@@ -8,7 +8,7 @@
             <div class="field form-row">
               <div class="col-2 required-b pt-2">
               </div>
-              <%= f.text_field :username, autofocus: true, autocomplete: "name", placeholder: "ユーザー名", class: "form-control col-10 px-2" %>
+              <%= f.text_field :username, autocomplete: "name", placeholder: "ユーザー名", class: "form-control col-10 px-2" %>
             </div>
 
             <div class="field form-row">
@@ -33,7 +33,7 @@
               <%= f.submit "新しいアカウントを作成", class: "form-control btn-primary my-4" %>
             </div>
           <% end %>
-
+          <%= link_to "すでにアカウントをお持ちの方はログイン", "/users/sign_in" %><br>
         </div>
     </div>
 </div>

@@ -1,4 +1,5 @@
 class RoomsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :search]
   def index
   end
 
@@ -28,7 +29,7 @@ class RoomsController < ApplicationController
 
   def search
   end
-  
+
   def edit
   end
 

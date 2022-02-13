@@ -1,7 +1,7 @@
 <div class="container reservations-new">
     <div class="row">
         <div class="col-6 offset-3">
-            <div class="reservations-nav-new">
+            <div class="reservations-new-nav">
                 <h4 class="reservations-new-check-content">予約内容確認</h4>
                 <h5 class="price-icon"><%= @room.price %>/日</h5>
                 <div class="reservations-new-date-select">
@@ -29,7 +29,7 @@
 
                         <p class="reservations-new-check-content">上記内容でよろしければ「予約を確定」を押してください</p>
 
-                        <%= f.submit "予約を確定", class: "btn btn-primary" %>
+                        <%= f.submit "予約を確定", class: "btn btn-primary form-control my-3" %>
 
                         <%= link_to("ルーム詳細に戻る", "/reservations/new/#{@reservation.room_id}", {data: {"turbolinks" => false}, class:"btn btn-secondary form-control"}) %>
                         

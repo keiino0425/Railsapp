@@ -1,5 +1,6 @@
 class ReservationsController < ApplicationController
   # before_action :permit_params, only: :confirm
+  before_action :authenticate_user!, except: [:new]
 
   def index
     @user = current_user

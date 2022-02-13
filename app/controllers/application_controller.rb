@@ -1,5 +1,4 @@
 class ApplicationController < ActionController::Base
-    before_action :authenticate_user!
     before_action :set_search
     before_action :configure_permitted_parameters, if: :devise_controller?
 
@@ -14,6 +13,7 @@ class ApplicationController < ActionController::Base
     end
 
     def after_sign_in_path_for(resource)
-        "/users/edit"
+        "/users/profile"
     end
+
 end
